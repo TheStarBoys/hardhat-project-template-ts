@@ -1,0 +1,13 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+jobs:
+  image: nikolaik/python-nodejs:python3.8-nodejs16-bullseye
+  script:
+    - yarn
+    - curl -L https://foundry.paradigm.xyz | bash
+    - . /root/.bashrc
+    - foundryup
+    - forge install
+    - yarn run test:forge
+    - yarn run test:hh

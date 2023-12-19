@@ -1,5 +1,10 @@
 [
   "constructor(string)",
+  "function addToA(uint256)",
+  "function addToB(uint256)",
   "function greet() view returns (string)",
-  "function setGreeting(string)"
+  "function setGreeting(string)",
+  "function val1() view returns (uint256)",
+  "function val2() view returns (uint256)",
+  "function val3() view returns (uint256)"
 ]
