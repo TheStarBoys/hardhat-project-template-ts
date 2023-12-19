@@ -3,7 +3,7 @@ pragma solidity ^0.8.19;
 
 contract Greeter {
     string private greeting;
-    
+
     uint256 public val1;
     uint256 public val2;
     uint256 public val3;

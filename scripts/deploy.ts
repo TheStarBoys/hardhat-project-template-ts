@@ -1,5 +1,5 @@
 import hre from "hardhat";
-import * as fs from 'node:fs/promises';
+import * as fs from "node:fs/promises";
 
 // Colour codes for terminal prints
 const RESET = "\x1b[0m";
@@ -46,10 +46,15 @@ async function main() {
   // Export deployed addresses to JSON file in root.
   const deployedAddresses: DeployedAddresses = {
     Greeter: contractAddress,
-  }
+  };
 
-  await fs.writeFile(`./deployed-addresses.${hre.network.name}.json`, JSON.stringify(deployedAddresses, null, 2));
-  console.log(`Deployed addresses written to ./deployed-addresses.${hre.network.name}.json`)
+  await fs.writeFile(
+    `./deployed-addresses.${hre.network.name}.json`,
+    JSON.stringify(deployedAddresses, null, 2),
+  );
+  console.log(
+    `Deployed addresses written to ./deployed-addresses.${hre.network.name}.json`,
+  );
 }
 
 main().catch((error) => {
