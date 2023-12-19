@@ -72,7 +72,7 @@ deployments
 forge-artifacts
 
 # Ignore flattened files
-flattened.sol
+flatten
 
 # Tenderly fork deployment directory
 deployments_tenderly
