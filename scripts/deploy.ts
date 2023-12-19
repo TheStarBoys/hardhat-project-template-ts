@@ -17,6 +17,10 @@ async function main() {
 
   console.log("Greeter deployed to: " + `${GREEN}${contractAddress}${RESET}\n`);
 
+  if (hre.network.name === "hardhat" || hre.network.name === "localhost") {
+    return;
+  }
+  
   console.log(
     "Waiting 30 seconds before beginning the contract verification to allow the block explorer to index the contract...\n",
   );

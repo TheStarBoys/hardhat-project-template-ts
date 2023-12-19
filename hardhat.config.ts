@@ -10,7 +10,7 @@ import "@typechain/hardhat";
 import "xdeployer";
 import "@matterlabs/hardhat-zksync-solc";
 import "@matterlabs/hardhat-zksync-deploy";
-import "@matterlabs/hardhat-zksync-verify";
+// import "@matterlabs/hardhat-zksync-verify";
 import "@matterlabs/hardhat-zksync-ethers";
 import "@truffle/dashboard-hardhat-plugin";
 import "hardhat-gas-reporter";
