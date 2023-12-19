@@ -17,10 +17,13 @@ import "hardhat-gas-reporter";
 import "hardhat-abi-exporter";
 import "solidity-coverage";
 import "hardhat-contract-sizer";
-import * as tdly from "@tenderly/hardhat-tenderly";
+
+// tenderly plugin will do too many calls on jsonRPC provider
+// considering commenting this line if deploying the contract failed
+// import * as tdly from "@tenderly/hardhat-tenderly";
 
 // Turning off the automatic Tenderly verification
-tdly.setup({ automaticVerifications: false });
+// tdly.setup({ automaticVerifications: false });
 
 const ethMainnetUrl = vars.get("ETH_MAINNET_URL", "https://rpc.ankr.com/eth");
 const accounts = [
@@ -34,7 +37,7 @@ const ledgerAccounts = [
   vars.get(
     "LEDGER_ACCOUNT",
     // `bytes20(uint160(uint256(keccak256("DEFAULT_VALUE"))))`
-    "0x8195fa8224c39103f578c9b84f951721df3fa71c",
+    "0x8195fA8224C39103F578C9b84f951721df3Fa71c",
   ),
 ];
 
