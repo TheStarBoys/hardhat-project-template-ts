@@ -1,0 +1,10 @@
+{
+    "solidity-va.test.defaultUnittestTemplate": "hardhat",
+    "solidity.packageDefaultDependenciesContractsDirectory": "contracts/src",
+    "solidity.packageDefaultDependenciesDirectory": [
+        "node_modules",
+        "lib"
+    ],
+    "solidity.compileUsingRemoteVersion": "v0.8.21+commit.d9974bed",
+    "solidity.defaultCompiler": "remote"
+}
