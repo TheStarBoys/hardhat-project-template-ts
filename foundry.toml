@@ -2,12 +2,12 @@
 [profile.default]
 src = 'contracts/src'                                         # the source directory
 test = 'contracts/test'                                       # the test directory
-out = 'forge-artifacts'                                       # the output directory (for artifacts)
-libs = ['contracts/lib']                                      # a list of library directories
+out = 'cache/forge/out'                                       # the output directory (for artifacts)
+libs = ['contracts/lib', 'node_modules']                      # a list of library directories
 remappings = []                                               # a list of remappings
 libraries = []                                                # a list of deployed libraries to link against
 cache = true                                                  # whether to cache builds or not
-cache_path = 'cache'                                          # where the cache is stored if enabled
+cache_path = 'cache/forge/cache'                                          # where the cache is stored if enabled
 force = false                                                 # whether to ignore the cache (clean build)
 evm_version = 'paris'                                         # the evm version (by hardfork name)
 gas_reports = ['*']                                           # list of contracts to report gas of
@@ -21,7 +21,7 @@ verbosity = 3                                                 # the verbosity of
 ignored_error_codes = []                                      # a list of ignored solc error codes
 fuzz = { runs = 256 }                                         # the number of fuzz runs for tests
 invariant = { runs = 256 }                                    # the number of runs that must execute for each invariant test group
-ffi = false                                                   # whether to enable foreign function interface (ffi) cheatcodes or not
+ffi = true                                                   # whether to enable foreign function interface (ffi) cheatcodes or not
 sender = '0x00a329c0648769a73afac7f9381e08fb43dbea72'         # the address of `msg.sender` in tests
 tx_origin = '0x00a329c0648769a73afac7f9381e08fb43dbea72'      # the address of `tx.origin` in tests
 initial_balance = '0xffffffffffffffffffffffff'                # the initial balance of the test contract

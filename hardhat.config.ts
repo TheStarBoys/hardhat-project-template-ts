@@ -72,6 +72,8 @@ task(
 const config: HardhatUserConfig = {
   paths: {
     sources: "./contracts/src",
+    cache: './cache/hardhat/cache',
+    artifacts: './cache/hardhat/artifacts',
   },
   solidity: {
     // Only use Solidity default versions `>=0.8.20` for EVM networks that support the opcode `PUSH0`
@@ -81,9 +83,15 @@ const config: HardhatUserConfig = {
       optimizer: {
         enabled: true,
         runs: 200,
+        details: {
+          yul: true,
+        }
       },
       evmVersion: "paris", // Prevent using the `PUSH0` opcode
     },
+  },
+  gasReporter: {
+    enabled: process.env.REPORT_GAS ? true : false,
   },
   zksolc: {
     version: "1.3.18",
