@@ -85,3 +85,6 @@ artifacts-zk
 # Miscellaneous files
 bin
 out
+
+# Report file including slither report
+report
