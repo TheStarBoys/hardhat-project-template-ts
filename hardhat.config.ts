@@ -62,8 +62,8 @@ task(
     for (const account of accounts) {
       console.log(
         account.address +
-          " " +
-          (await hre.ethers.provider.getBalance(account.address)),
+        " " +
+        (await hre.ethers.provider.getBalance(account.address)),
       );
     }
   },
@@ -127,17 +127,14 @@ const config: HardhatUserConfig = {
         // If you want to do some forking, set `enabled` to true
         enabled: false,
       },
-      ledgerAccounts,
       // zksync: true, // Enable zkSync in the Hardhat local network
     },
     localhost: {
       url: "http://127.0.0.1:8545",
-      ledgerAccounts,
     },
     tenderly: {
       // Add your own Tenderly fork ID
       url: `https://rpc.tenderly.co/fork/${vars.get("TENDERLY_FORK_ID", "")}`,
-      ledgerAccounts,
     },
     devnet: {
       // Add your own Tenderly DevNet ID
@@ -146,7 +143,6 @@ const config: HardhatUserConfig = {
         "",
       )}`,
       accounts,
-      ledgerAccounts,
     },
     goerli: {
       chainId: 5,
@@ -155,13 +151,11 @@ const config: HardhatUserConfig = {
         "https://rpc.ankr.com/eth_goerli",
       ),
       accounts,
-      ledgerAccounts,
     },
     sepolia: {
       chainId: 11155111,
       url: vars.get("ETH_SEPOLIA_TESTNET_URL", "https://rpc.sepolia.org"),
       accounts,
-      ledgerAccounts,
     },
     holesky: {
       chainId: 17000,
@@ -170,13 +164,11 @@ const config: HardhatUserConfig = {
         "https://holesky.rpc.thirdweb.com",
       ),
       accounts,
-      ledgerAccounts,
     },
     ethMain: {
       chainId: 1,
       url: ethMainnetUrl,
       accounts,
-      ledgerAccounts,
     },
     bscTestnet: {
       chainId: 97,
@@ -185,31 +177,26 @@ const config: HardhatUserConfig = {
         "https://data-seed-prebsc-1-s1.binance.org:8545",
       ),
       accounts,
-      ledgerAccounts,
     },
     bscMain: {
       chainId: 56,
       url: vars.get("BSC_MAINNET_URL", "https://bsc-dataseed1.binance.org"),
       accounts,
-      ledgerAccounts,
     },
     optimismTestnet: {
       chainId: 420,
       url: vars.get("OPTIMISM_TESTNET_URL", "https://goerli.optimism.io"),
       accounts,
-      ledgerAccounts,
     },
     optimismSepolia: {
       chainId: 11155420,
       url: vars.get("OPTIMISM_SEPOLIA_URL", "https://sepolia.optimism.io"),
       accounts,
-      ledgerAccounts,
     },
     optimismMain: {
       chainId: 10,
       url: vars.get("OPTIMISM_MAINNET_URL", "https://mainnet.optimism.io"),
       accounts,
-      ledgerAccounts,
     },
     arbitrumSepolia: {
       chainId: 421614,
@@ -218,25 +205,21 @@ const config: HardhatUserConfig = {
         "https://sepolia-rollup.arbitrum.io/rpc",
       ),
       accounts,
-      ledgerAccounts,
     },
     arbitrumMain: {
       chainId: 42161,
       url: vars.get("ARBITRUM_MAINNET_URL", "https://arb1.arbitrum.io/rpc"),
       accounts,
-      ledgerAccounts,
     },
     arbitrumNova: {
       chainId: 42170,
       url: vars.get("ARBITRUM_NOVA_URL", "https://nova.arbitrum.io/rpc"),
       accounts,
-      ledgerAccounts,
     },
     mumbai: {
       chainId: 80001,
       url: vars.get("POLYGON_TESTNET_URL", "https://rpc-mumbai.maticvigil.com"),
       accounts,
-      ledgerAccounts,
     },
     polygonZkEVMTestnet: {
       chainId: 1442,
@@ -245,37 +228,31 @@ const config: HardhatUserConfig = {
         "https://rpc.public.zkevm-test.net",
       ),
       accounts,
-      ledgerAccounts,
     },
     polygon: {
       chainId: 137,
       url: vars.get("POLYGON_MAINNET_URL", "https://polygon-rpc.com"),
       accounts,
-      ledgerAccounts,
     },
     polygonZkEVMMain: {
       chainId: 1101,
       url: vars.get("POLYGON_ZKEVM_MAINNET_URL", "https://zkevm-rpc.com"),
       accounts,
-      ledgerAccounts,
     },
     hecoMain: {
       chainId: 128,
       url: vars.get("HECO_MAINNET_URL", "https://http-mainnet.hecochain.com"),
       accounts,
-      ledgerAccounts,
     },
     fantomTestnet: {
       chainId: 4002,
       url: vars.get("FANTOM_TESTNET_URL", "https://rpc.testnet.fantom.network"),
       accounts,
-      ledgerAccounts,
     },
     fantomMain: {
       chainId: 250,
       url: vars.get("FANTOM_MAINNET_URL", "https://rpc.ankr.com/fantom"),
       accounts,
-      ledgerAccounts,
     },
     fuji: {
       chainId: 43113,
@@ -284,7 +261,6 @@ const config: HardhatUserConfig = {
         "https://api.avax-test.network/ext/bc/C/rpc",
       ),
       accounts,
-      ledgerAccounts,
     },
     avalanche: {
       chainId: 43114,
@@ -293,19 +269,16 @@ const config: HardhatUserConfig = {
         "https://api.avax.network/ext/bc/C/rpc",
       ),
       accounts,
-      ledgerAccounts,
     },
     chiado: {
       chainId: 10200,
       url: vars.get("GNOSIS_TESTNET_URL", "https://rpc.chiadochain.net"),
       accounts,
-      ledgerAccounts,
     },
     gnosis: {
       chainId: 100,
       url: vars.get("GNOSIS_MAINNET_URL", "https://rpc.gnosischain.com"),
       accounts,
-      ledgerAccounts,
     },
     moonbaseAlpha: {
       chainId: 1287,
@@ -314,7 +287,6 @@ const config: HardhatUserConfig = {
         "https://rpc.api.moonbase.moonbeam.network",
       ),
       accounts,
-      ledgerAccounts,
     },
     moonriver: {
       chainId: 1285,
@@ -323,7 +295,6 @@ const config: HardhatUserConfig = {
         "https://moonriver.public.blastapi.io",
       ),
       accounts,
-      ledgerAccounts,
     },
     moonbeam: {
       chainId: 1284,
@@ -332,7 +303,6 @@ const config: HardhatUserConfig = {
         "https://moonbeam.public.blastapi.io",
       ),
       accounts,
-      ledgerAccounts,
     },
     alfajores: {
       chainId: 44787,
@@ -341,115 +311,96 @@ const config: HardhatUserConfig = {
         "https://alfajores-forno.celo-testnet.org",
       ),
       accounts,
-      ledgerAccounts,
     },
     celo: {
       chainId: 42220,
       url: vars.get("CELO_MAINNET_URL", "https://forno.celo.org"),
       accounts,
-      ledgerAccounts,
     },
     auroraTestnet: {
       chainId: 1313161555,
       url: vars.get("AURORA_TESTNET_URL", "https://testnet.aurora.dev"),
       accounts,
-      ledgerAccounts,
     },
     auroraMain: {
       chainId: 1313161554,
       url: vars.get("AURORA_MAINNET_URL", "https://mainnet.aurora.dev"),
       accounts,
-      ledgerAccounts,
     },
     harmonyTestnet: {
       chainId: 1666700000,
       url: vars.get("HARMONY_TESTNET_URL", "https://api.s0.b.hmny.io"),
       accounts,
-      ledgerAccounts,
     },
     harmonyMain: {
       chainId: 1666600000,
       url: vars.get("HARMONY_MAINNET_URL", "https://api.harmony.one"),
       accounts,
-      ledgerAccounts,
     },
     spark: {
       chainId: 123,
       url: vars.get("FUSE_TESTNET_URL", "https://rpc.fusespark.io"),
       accounts,
-      ledgerAccounts,
     },
     fuse: {
       chainId: 122,
       url: vars.get("FUSE_MAINNET_URL", "https://rpc.fuse.io"),
       accounts,
-      ledgerAccounts,
     },
     cronosTestnet: {
       chainId: 338,
       url: vars.get("CRONOS_TESTNET_URL", "https://evm-t3.cronos.org"),
       accounts,
-      ledgerAccounts,
     },
     cronosMain: {
       chainId: 25,
       url: vars.get("CRONOS_MAINNET_URL", "https://evm.cronos.org"),
       accounts,
-      ledgerAccounts,
     },
     evmosTestnet: {
       chainId: 9000,
       url: vars.get("EVMOS_TESTNET_URL", "https://evmos-testnet.lava.build"),
       accounts,
-      ledgerAccounts,
     },
     evmosMain: {
       chainId: 9001,
       url: vars.get("EVMOS_MAINNET_URL", "https://evmos.lava.build"),
       accounts,
-      ledgerAccounts,
     },
     bobaTestnet: {
       chainId: 2888,
       url: vars.get("BOBA_TESTNET_URL", "https://goerli.boba.network"),
       accounts,
-      ledgerAccounts,
     },
     bobaMain: {
       chainId: 288,
       url: vars.get("BOBA_MAINNET_URL", "https://mainnet.boba.network"),
       accounts,
-      ledgerAccounts,
     },
     cantoTestnet: {
       chainId: 7701,
       url: vars.get("CANTO_TESTNET_URL", "https://canto-testnet.plexnode.wtf"),
       accounts,
-      ledgerAccounts,
     },
     cantoMain: {
       chainId: 7700,
       url: vars.get("CANTO_MAINNET_URL", "https://canto.slingshot.finance"),
       accounts,
-      ledgerAccounts,
     },
     baseTestnet: {
       chainId: 84531,
       url: vars.get("BASE_TESTNET_URL", "https://goerli.base.org"),
       accounts,
-      ledgerAccounts,
     },
     baseSepolia: {
       chainId: 84532,
       url: vars.get("BASE_SEPOLIA_URL", "https://sepolia.base.org"),
       accounts,
-      ledgerAccounts,
     },
     baseMain: {
       chainId: 8453,
       url: vars.get("BASE_MAINNET_URL", "https://mainnet.base.org"),
       accounts,
-      ledgerAccounts,
     },
     zkSyncTestnet: {
       chainId: 300,
@@ -459,7 +410,6 @@ const config: HardhatUserConfig = {
       verifyURL:
         "https://explorer.sepolia.era.zksync.dev/contract_verification",
       accounts,
-      ledgerAccounts,
     },
     zkSyncMain: {
       chainId: 324,
@@ -469,19 +419,16 @@ const config: HardhatUserConfig = {
       verifyURL:
         "https://zksync2-mainnet-explorer.zksync.io/contract_verification",
       accounts,
-      ledgerAccounts,
     },
     mantleTestnet: {
       chainId: 5001,
       url: vars.get("MANTLE_TESTNET_URL", "https://rpc.testnet.mantle.xyz"),
       accounts,
-      ledgerAccounts,
     },
     mantleMain: {
       chainId: 5000,
       url: vars.get("MANTLE_MAINNET_URL", "https://rpc.mantle.xyz"),
       accounts,
-      ledgerAccounts,
     },
     filecoinTestnet: {
       chainId: 314159,
@@ -490,37 +437,31 @@ const config: HardhatUserConfig = {
         "https://rpc.ankr.com/filecoin_testnet",
       ),
       accounts,
-      ledgerAccounts,
     },
     filecoinMain: {
       chainId: 314,
       url: vars.get("FILECOIN_MAINNET_URL", "https://rpc.ankr.com/filecoin"),
       accounts,
-      ledgerAccounts,
     },
     scrollTestnet: {
       chainId: 534351,
       url: vars.get("SCROLL_TESTNET_URL", "https://sepolia-rpc.scroll.io"),
       accounts,
-      ledgerAccounts,
     },
     scrollMain: {
       chainId: 534352,
       url: vars.get("SCROLL_MAINNET_URL", "https://rpc.scroll.io"),
       accounts,
-      ledgerAccounts,
     },
     lineaTestnet: {
       chainId: 59140,
       url: vars.get("LINEA_TESTNET_URL", "https://rpc.goerli.linea.build"),
       accounts,
-      ledgerAccounts,
     },
     lineaMain: {
       chainId: 59144,
       url: vars.get("LINEA_MAINNET_URL", "https://rpc.linea.build"),
       accounts,
-      ledgerAccounts,
     },
     shimmerEVMTestnet: {
       chainId: 1071,
@@ -529,31 +470,26 @@ const config: HardhatUserConfig = {
         "https://json-rpc.evm.testnet.shimmer.network",
       ),
       accounts,
-      ledgerAccounts,
     },
     zoraTestnet: {
       chainId: 999,
       url: vars.get("ZORA_TESTNET_URL", "https://testnet.rpc.zora.energy"),
       accounts,
-      ledgerAccounts,
     },
     zoraMain: {
       chainId: 7777777,
       url: vars.get("ZORA_MAINNET_URL", "https://rpc.zora.energy"),
       accounts,
-      ledgerAccounts,
     },
     luksoTestnet: {
       chainId: 4201,
       url: vars.get("LUKSO_TESTNET_URL", "https://rpc.testnet.lukso.network"),
       accounts,
-      ledgerAccounts,
     },
     luksoMain: {
       chainId: 42,
       url: vars.get("LUKSO_MAINNET_URL", "https://rpc.lukso.gateway.fm"),
       accounts,
-      ledgerAccounts,
     },
     mantaTestnet: {
       chainId: 3441005,
@@ -562,7 +498,6 @@ const config: HardhatUserConfig = {
         "https://pacific-rpc.testnet.manta.network/http",
       ),
       accounts,
-      ledgerAccounts,
     },
     mantaMain: {
       chainId: 169,
@@ -571,19 +506,16 @@ const config: HardhatUserConfig = {
         "https://pacific-rpc.manta.network/http",
       ),
       accounts,
-      ledgerAccounts,
     },
     shardeumTestnet: {
       chainId: 8081,
       url: vars.get("SHARDEUM_TESTNET_URL", "https://dapps.shardeum.org"),
       accounts,
-      ledgerAccounts,
     },
     artheraTestnet: {
       chainId: 10243,
       url: vars.get("ARTHERA_TESTNET_URL", "https://rpc-test.arthera.net"),
       accounts,
-      ledgerAccounts,
     },
   },
   xdeploy: {
@@ -628,10 +560,6 @@ const config: HardhatUserConfig = {
     only: [],
     except: [],
   },
-  gasReporter: {
-    enabled: vars.has("REPORT_GAS") ? true : false,
-    currency: "USD",
-  },
   abiExporter: {
     path: "./abis",
     runOnCompile: true,
@@ -644,6 +572,10 @@ const config: HardhatUserConfig = {
   sourcify: {
     // Enable Sourcify verification by default
     enabled: true,
+    // Optional: specify a different Sourcify server
+    apiURL: "https://sourcify.dev/server",
+    // Optional: specify a different Sourcify repository
+    browserUrl: "https://repo.sourcify.dev",
   },
   etherscan: {
     // Add your own API key by getting an account at etherscan (https://etherscan.io), snowtrace (https://snowtrace.io) etc.
