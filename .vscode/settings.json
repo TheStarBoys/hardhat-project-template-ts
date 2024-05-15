@@ -5,6 +5,11 @@
         "node_modules",
         "lib"
     ],
-    "solidity.compileUsingRemoteVersion": "v0.8.21+commit.d9974bed",
+    "editor.formatOnSave": true,
+    "[solidity]": {
+        "editor.defaultFormatter": "NomicFoundation.hardhat-solidity"
+    },
+    "solidity.formatter": "prettier",
+    "solidity.compileUsingRemoteVersion": "v0.8.21",
     "solidity.defaultCompiler": "remote"
 }
